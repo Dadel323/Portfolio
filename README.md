@@ -1,7 +1,7 @@
-# Andreas Meyer - Software Engineering Portfolio
+# Andreas Meyer - Software Projects Portfolio
 
 **MSc Mechanical Engineering Student** | ETH Zurich  
-**Focus:** Algorithms, Machine Learning, Robotics & Control Systems
+**Focus:** Software Engineering and Robotics
 
 [![Email](https://img.shields.io/badge/Email-andrmeyer@ethz.ch-red)](mailto:andrmeyer@ethz.ch)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/in/andreasmeyer)

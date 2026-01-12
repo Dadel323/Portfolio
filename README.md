@@ -73,9 +73,7 @@ Given an RGB image from ANYmal's camera, estimate the distance to the closest ob
 
 
 **5. Results**
-- **Public test MAE:** 9.727 cm (Baseline for 6.0: 12 cm)
-- **Private test MAE:** 21.3 cm (Final grade: 5.5/6.0)
-- **Key insight:** Ensemble of Random Forest + SVR improved results by 15%
+- **Final MAE:** 9.727 cm (Baseline for 6.0: 12 cm)
 
 **Technologies:** Python, scikit-learn, NumPy, Pandas, Matplotlib, PCA, GridSearchCV
 

@@ -4,7 +4,7 @@
 **Focus:** Software Engineering and Robotics
 
 [![Email](https://img.shields.io/badge/Email-andrmeyer@ethz.ch-red)](mailto:andrmeyer@ethz.ch)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)]((https://linkedin.com/in/andreas-meyer-67674432b)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/in/andreas-meyer-67674432b)
 
 ---
 

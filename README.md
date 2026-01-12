@@ -49,9 +49,6 @@ This repository catalogs my programming projects and coursework from ETH Zurich.
 - Numerical computing
 - Competitive programming
 
-**Available:** Architecture documentation, optimization techniques, performance analysis
-**Code:** Private (competition rules), available upon request with professor approval
-
 ---
 
 ## 💻 Coursework
@@ -72,7 +69,7 @@ Two comprehensive machine learning projects applying regression and deep learnin
 Given an RGB image from ANYmal's camera, estimate the distance to the closest obstacle in meters. Dataset: 300×300 images captured in office environment with ground truth from depth sensors.
 
 
-**5. Results**
+**Results**
 - **Final MAE:** 9.727 cm (Baseline for 6.0: 12 cm)
 
 **Technologies:** Python, scikit-learn, NumPy, Pandas, Matplotlib, PCA, GridSearchCV
@@ -83,8 +80,6 @@ Given an RGB image from ANYmal's camera, estimate the distance to the closest ob
 - Hyperparameter optimization
 - Model selection and ensemble methods
 - Cross-validation and avoiding overfitting
-
-**Code:** Private (academic integrity), available upon request
 
 ---
 
@@ -104,8 +99,6 @@ Given RGB images (378×252 pixels), output binary masks identifying pixels belon
 - Data augmentation strategies
 - Transfer learning concepts
 - Model ensembling
-
-**Code:** Private (academic integrity), available upon request
 
 ---
 
@@ -128,8 +121,6 @@ Algorithms Implemented:
 - Bidirectional search
 ```
 
-
-
 **2. Sampling-Based Planning**
 ```
 Algorithms Implemented:
@@ -138,7 +129,6 @@ Algorithms Implemented:
 - PRM (Probabilistic Roadmap)
 - RRT-Connect (bidirectional RRT)
 ```
-
 ---
 
 **3. Dynamic Programming**
@@ -147,9 +137,7 @@ Applications:
 - Value Iteration for cost-to-go
 - Policy Iteration
 - Grid-based path planning
-- Stochastic shortest path (connection to DPOC competition!)
 ```
-
 ---
 
 **4. Trajectory Optimization**
@@ -180,8 +168,6 @@ Concepts:
 - Data structures (trees, graphs, k-d trees, priority queues)
 - Performance optimization
 - Mathematical modeling
-
-**Code:** Private (course policy), available upon request
 
 ---
 
@@ -215,7 +201,6 @@ Comprehensive hands-on course covering embedded systems, control theory, and rob
 - Gear ratio calculations
 - Torque and speed relationships
 
-
 ---
 
 **Lab 4: Data Acquisition & Sensors**
@@ -223,7 +208,6 @@ Comprehensive hands-on course covering embedded systems, control theory, and rob
 - Hall effect sensor for magnetic flux density
 - Linear calibration (least squares fitting)
 - Sensor signal conditioning
-
 
 ---
 
@@ -233,7 +217,6 @@ Comprehensive hands-on course covering embedded systems, control theory, and rob
 - Lens distortion correction
 - Object detection using HSV color space
 - Contour detection and tracking
-
 
 ---
 
@@ -252,8 +235,6 @@ Comprehensive hands-on course covering embedded systems, control theory, and rob
 - Computer vision and image processing
 - Hardware-software integration
 - Control theory application
-
-**Code:** Private (academic integrity), available upon request
 
 ---
 
@@ -276,7 +257,6 @@ Comprehensive hands-on training in ROS for robotics applications.
 - RGB-D cameras (depth + color)
 - IMU (inertial measurement unit)
 - Wheel encoders for odometry
-
 
 ---
 
@@ -312,8 +292,6 @@ Comprehensive hands-on training in ROS for robotics applications.
 - Real-time sensor processing
 - Navigation and localization
 - System integration
-
-**Code:** Private (course policy), available upon request
 
 ---
 
@@ -359,10 +337,6 @@ Comprehensive hands-on training in ROS for robotics applications.
 - Software integration
 - Academic research and documentation
 
-**Publication:** Thesis submitted to ETH library, available through university
-
-**Code:** Private (thesis policy), available with advisor approval
-
 ---
 
 ## 🚀 Extracurricular Projects
@@ -382,28 +356,6 @@ Student organization designing and building rockets and satellites.
 **My Contributions:**
 
 **1. Wind Estimation Algorithm (Rust)**
-```rust
-// Real-time wind estimation from GPS and IMU
-struct WindEstimator {
-    velocity_ground: Vec3,
-    velocity_air: Vec3,
-    kalman_filter: KalmanFilter,
-}
-
-impl WindEstimator {
-    fn update(&mut self, gps_vel: Vec3, imu_accel: Vec3, dt: f32) {
-        // Estimate airspeed from drag
-        let drag = self.compute_drag(imu_accel);
-        let velocity_air = self.estimate_airspeed(drag);
-        
-        // Wind = ground velocity - air velocity
-        let wind_estimate = gps_vel - velocity_air;
-        
-        // Kalman filter for smoothing
-        self.kalman_filter.update(wind_estimate, dt);
-    }
-}
-```
 
 **Why Rust?**
 - Memory safety without garbage collection
@@ -413,14 +365,7 @@ impl WindEstimator {
 
 ---
 
-
-**System Performance:**
-- Landing accuracy: ±50m (simulated)
-- Control loop frequency: 50 Hz
-- Wind estimation latency: <20ms
-- Autonomous recovery: 4 successful test flights
-
-**Technologies:** Rust, embedded systems, Kalman filtering, control theory, GPS/IMU fusion
+**Technologies:** Rust, embedded systems, Kalman filtering, control theory, sensor fusion
 
 **Skills Demonstrated:**
 - Systems programming in Rust
@@ -436,16 +381,6 @@ impl WindEstimator {
 **Role:** Control Systems Engineer
 
 **Challenge:** Precise thermal control (±0.5°C) for microfluidic experiment in space
-
-**My Contributions:**
-
-**1. Controller Implementation (C++)**
-
-
-**2. Model Predictive Control (C++)**
-
-**3. Validation & Analysis (Python)**
-
 
 **Technologies:** C++, Python, NumPy, Matplotlib, PID control, MPC, thermal modeling
 
@@ -475,7 +410,6 @@ impl WindEstimator {
 
 **3. Autonomous Controller**
 
-
 **Certificate:** ESA Robotics Workshop Certificate 2024
 
 **Technologies:** Python, scikit-learn, ROS, OpenCV, Random Forest, Raspberry Pi
@@ -499,8 +433,6 @@ Most repositories remain private due to **ETH Zurich's academic integrity polici
 ✅ Detailed project descriptions and documentation  
 ✅ Algorithm explanations and pseudocode  
 ✅ Architecture diagrams and system design  
-✅ Performance results and benchmarks  
-✅ Code samples with employer verification  
 
 **What I CANNOT share publicly:**
 ❌ Complete coursework solutions (ongoing academic use)  

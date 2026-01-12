@@ -56,7 +56,7 @@ This repository catalogs my programming projects and coursework from ETH Zurich.
 
 ## 💻 Coursework
 
-### Stochastics and Machine Learning (Grade: 5.0/6.0)
+### Stochastics and Machine Learning
 
 Two comprehensive machine learning projects applying regression and deep learning to real-world robotics problems.
 
@@ -415,30 +415,6 @@ impl WindEstimator {
 
 ---
 
-**2. Guidance Algorithm (Rust)**
-```rust
-// Compute steering commands for autonomous landing
-fn compute_steering_command(
-    current_pos: Vec3,
-    target_pos: Vec3,
-    wind: Vec3,
-    parachute_params: &ParachuteParams
-) -> SteeringCommand {
-    // Predict landing point with current wind
-    let predicted_landing = predict_landing_point(
-        current_pos, wind, parachute_params
-    );
-    
-    // Compute error and control
-    let error = target_pos - predicted_landing;
-    let steering = pid_controller.update(error);
-    
-    SteeringCommand {
-        left_brake: clamp(steering - error.x, 0.0, 1.0),
-        right_brake: clamp(steering + error.x, 0.0, 1.0),
-    }
-}
-```
 
 **System Performance:**
 - Landing accuracy: ±50m (simulated)
@@ -466,87 +442,12 @@ fn compute_steering_command(
 **My Contributions:**
 
 **1. Controller Implementation (C++)**
-```cpp
-// PID and MPC controllers for thermal regulation
-class ThermalController {
-private:
-    float Kp, Ki, Kd;
-    float integral, prev_error;
-    
-public:
-    float computePID(float setpoint, float measurement, float dt) {
-        float error = setpoint - measurement;
-        
-        // PID computation
-        float P = Kp * error;
-        
-        integral += error * dt;
-        float I = Ki * integral;
-        
-        float derivative = (error - prev_error) / dt;
-        float D = Kd * derivative;
-        
-        prev_error = error;
-        return P + I + D;
-    }
-};
-```
+
 
 **2. Model Predictive Control (C++)**
-```cpp
-// MPC for predictive thermal control
-class MPCController {
-public:
-    ControlOutput compute(
-        float current_temp,
-        float target_temp,
-        int prediction_horizon
-    ) {
-        // Predict temperature evolution
-        VectorXf predictions = predict_temperature(
-            current_temp, prediction_horizon
-        );
-        
-        // Solve optimization problem
-        // minimize: Σ (T_predicted - T_target)² + λ * ΔU²
-        VectorXf optimal_inputs = solve_qp(
-            predictions, target_temp, prediction_horizon
-        );
-        
-        return optimal_inputs[0];  // Apply first input
-    }
-};
-```
 
 **3. Validation & Analysis (Python)**
-```python
-# Validate controller performance
-import numpy as np
-import matplotlib.pyplot as plt
 
-def validate_controller(setpoint, measurements, time):
-    # Compute performance metrics
-    error = measurements - setpoint
-    mae = np.mean(np.abs(error))
-    settling_time = compute_settling_time(error, threshold=0.5)
-    overshoot = np.max(measurements) - setpoint
-    
-    # Visualize results
-    plt.figure(figsize=(10, 6))
-    plt.plot(time, measurements, label='Measured')
-    plt.axhline(setpoint, color='r', linestyle='--', label='Setpoint')
-    plt.fill_between(time, setpoint-0.5, setpoint+0.5, 
-                     alpha=0.2, label='±0.5°C band')
-    plt.legend()
-    plt.savefig('thermal_control_results.png')
-```
-
-**Performance Results:**
-| Controller | Settling Time | Overshoot | Steady-State Error | Energy Efficiency |
-|-----------|--------------|-----------|-------------------|-------------------|
-| PID | 45s | 1.2°C | ±0.8°C | Baseline |
-| PID (tuned) | 32s | 0.7°C | ±0.4°C | +8% |
-| MPC | 28s | 0.3°C | ±0.2°C | +15% |
 
 **Technologies:** C++, Python, NumPy, Matplotlib, PID control, MPC, thermal modeling
 
@@ -571,73 +472,11 @@ def validate_controller(setpoint, measurements, time):
 **My Solution:**
 
 **1. Machine Learning Pipeline**
-```python
-# Terrain classification (sand, gravel, rock, obstacle)
-from sklearn.ensemble import RandomForestClassifier
-
-def train_terrain_classifier(images, labels):
-    # Extract features (color + texture)
-    features = []
-    for img in images:
-        hsv_hist = compute_hsv_histogram(img)
-        lbp_texture = compute_lbp_features(img)
-        features.append(np.concatenate([hsv_hist, lbp_texture]))
-    
-    X = np.array(features)
-    
-    # Train Random Forest
-    clf = RandomForestClassifier(
-        n_estimators=100,
-        max_depth=20,
-        random_state=42
-    )
-    clf.fit(X, labels)
-    
-    return clf
-```
 
 **2. ROS Integration**
-```python
-class TerrainClassifierNode:
-    def __init__(self):
-        rospy.init_node('terrain_classifier')
-        self.classifier = joblib.load('terrain_model.pkl')
-        
-        # ROS communication
-        self.image_sub = rospy.Subscriber('/camera/image', Image, 
-                                          self.callback)
-        self.cmd_pub = rospy.Publisher('/cmd_vel', Twist, 
-                                       queue_size=10)
-    
-    def callback(self, msg):
-        # Convert ROS image to OpenCV
-        frame = self.bridge.imgmsg_to_cv2(msg, 'bgr8')
-        
-        # Classify terrain
-        terrain = self.classify(frame)
-        
-        # Adjust speed based on terrain
-        speed = self.speed_map[terrain]
-        cmd = Twist()
-        cmd.linear.x = speed
-        self.cmd_pub.publish(cmd)
-```
 
 **3. Autonomous Controller**
-```python
-speed_map = {
-    'safe_sand': 1.0,      # Full speed
-    'safe_gravel': 0.8,    # Slightly slower
-    'risky_rock': 0.4,     # Careful navigation
-    'obstacle': 0.0        # Stop
-}
-```
 
-**Results:**
-- Classification accuracy: 92% (Random Forest)
-- Obstacle avoidance: 95% success rate
-- Real-time inference: 50ms per frame (20 FPS)
-- Autonomous navigation: Successfully completed test course
 
 **Certificate:** ESA Robotics Workshop Certificate 2024
 
@@ -652,64 +491,7 @@ speed_map = {
 
 ---
 
-## 🛠️ Technical Skills
 
-### Programming Languages
-- **Expert:** Python (5 years)
-- **Proficient:** C++ (3 years), C (2 years)
-- **Intermediate:** Rust (1 year), MATLAB, JavaScript
-
-### Machine Learning & AI
-- **Libraries:** scikit-learn, PyTorch, TensorFlow, NumPy, SciPy, Pandas
-- **Techniques:** Regression, CNN, Random Forest, SVM, PCA, ensemble methods
-- **Tools:** Jupyter, GridSearchCV, cross-validation, data augmentation
-
-### Algorithms & Data Structures
-- **Search:** BFS, DFS, Dijkstra, A*, bidirectional search
-- **Planning:** RRT, RRT*, PRM, dynamic programming, trajectory optimization
-- **Optimization:** Gradient descent, convex optimization, linear programming
-- **Data Structures:** Trees, graphs, heaps, hash maps, k-d trees
-
-### Robotics & Control
-- **Frameworks:** ROS, ROS2, Gazebo, OMPL
-- **Control:** PID, MPC, LQR, Kalman filtering
-- **Computer Vision:** OpenCV, camera calibration, object detection
-- **Planning:** Motion planning, SLAM, navigation
-
-### Software Engineering
-- **Version Control:** Git, GitHub
-- **Containerization:** Docker
-- **Build Systems:** CMake, Make
-- **Testing:** pytest, unittest, integration testing
-- **Documentation:** Markdown, Doxygen, technical writing
-
-### Tools & Frameworks
-- **Scientific Computing:** NumPy, SciPy, Matplotlib, Seaborn
-- **Embedded:** Microcontrollers, Arduino, Raspberry Pi
-- **Simulation:** Gazebo, RViz, MATLAB/Simulink
-- **IDEs:** VSCode, PyCharm, CLion
-
----
-
-## 📊 Academic Performance
-
-**ETH Zurich - MSc Mechanical Engineering (2025-Present)**
-- Focus: Robotics, Systems and Control
-- Relevant Courses: Planning & Decision Making, System Identification, OOP
-
-**ETH Zurich - BSc Mechanical Engineering (2022-2026)**
-- **Overall GPA:** 5.0/6.0
-- **Key Courses:**
-  - Dynamic Programming & Optimal Control: 5.25/6.0
-  - Autonomous Mobile Robots: 5.75/6.0
-  - Control Systems I: 5.75/6.0
-  - Control Systems II: 5.5/6.0
-  - Stochastics & Machine Learning: 5.0/6.0
-  - Linear Algebra: 5.75/6.0
-  - Introduction to Mechatronics: Pass
-  - Bachelor Thesis: 5.75/6.0
-
----
 
 ## 📄 Why Code is Private
 
@@ -731,8 +513,6 @@ Most repositories remain private due to **ETH Zurich's academic integrity polici
 - Company name and position
 - Specific projects of interest
 - I'll respond within 24 hours with access or code samples
-
-Many students at top universities (MIT, Stanford, ETH) follow similar practices to respect academic integrity while showcasing their work professionally.
 
 ---
 
@@ -762,50 +542,6 @@ Many students at top universities (MIT, Stanford, ETH) follow similar practices 
 - System architecture and design
 - Software engineering best practices
 - Performance optimization
-
----
-
-## 📫 Contact & Availability
-
-**Email:** andrmeyer@ethz.ch  
-**LinkedIn:** [linkedin.com/in/andreasmeyer](https://linkedin.com/in/andreasmeyer)  
-**Location:** Zurich, Switzerland  
-**Availability:** Seeking Software Engineering Internship (Summer 2026)
-
-**Open to:**
-- Software Engineering roles
-- Machine Learning Engineering
-- Robotics Software Development
-- Algorithm Engineering
-- Locations: Zurich, Munich, London, Dublin, remote
-
-**References available upon request**
-
----
-
-## 📚 Additional Information
-
-**Languages:**
-- German (Native)
-- English (Proficient - C1)
-- French (Advanced - B2)
-
-**Interests:**
-- Competitive programming and algorithm optimization
-- Open source robotics (ROS, ExoMy)
-- Space technology and aerospace software
-- Machine learning for robotics
-- Systems programming in Rust
-
-**Continuous Learning:**
-- LeetCode practice (preparing for technical interviews)
-- Reading research papers on planning algorithms
-- Contributing to open source when possible
-- Following developments in autonomous systems
-
----
-
-**This portfolio represents 4+ years of intensive software engineering and robotics education at ETH Zurich. While code remains private per academic policy, I'm eager to discuss my work in detail and share relevant samples with potential employers.**
 
 ---
 

@@ -1,2 +1,812 @@
-# Portfolio
-Repository listing different programming projects, which I have to keep private
+# Andreas Meyer - Software Engineering Portfolio
+
+**MSc Mechanical Engineering Student** | ETH Zurich  
+**Focus:** Algorithms, Machine Learning, Robotics & Control Systems
+
+[![Email](https://img.shields.io/badge/Email-andrmeyer@ethz.ch-red)](mailto:andrmeyer@ethz.ch)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/in/andreasmeyer)
+
+---
+
+## 📌 About This Portfolio
+
+This repository catalogs my programming projects and coursework from ETH Zurich. Many projects remain **private** due to **academic integrity policies**, but I'm happy to share code samples with potential employers upon request. Below you'll find detailed descriptions of my work, the technologies used, and the skills developed.
+
+**Available to share:**
+- Architecture and approach documentation
+- Algorithm explanations and pseudocode
+- Performance results and analysis
+- Code samples with employer verification
+
+**Contact me at andrmeyer@ethz.ch or andreasm323@gmail.com to request access.**
+
+---
+
+## 🏆 Competitions & Achievements
+
+### 🥇 Dynamic Programming and Optimal Control Competition (2024)
+
+**Result: 1st Place | 2x faster than 2nd place competitor**
+
+**Challenge:** Solve a Stochastic Shortest Path problem as efficiently as possible using only Python, NumPy, and SciPy.
+
+**Problem:** Navigate an agent through a stochastic grid environment with:
+- Probabilistic transitions (flow fields, currents)
+- Multiple cost factors (time, thruster, collision penalties)
+- Moving obstacles (drones)
+- Goal: Find optimal policy minimizing expected cost-to-go
+
+**Why I Won:**
+- **Algorithmic optimization:** Transformed O(K²L) nested loops into O(KL) vectorized operations
+- **Matrix operations:** Transposed probability tensor for cache-friendly access
+- **Numerical efficiency:** Minimized memory allocations and data copying
+
+**Technologies:** Python, NumPy, SciPy, dynamic programming, optimization
+
+**Skills Demonstrated:**
+- Algorithm design and complexity analysis
+- Performance optimization and profiling
+- Numerical computing
+- Competitive programming
+
+**Available:** Architecture documentation, optimization techniques, performance analysis
+**Code:** Private (competition rules), available upon request with professor approval
+
+---
+
+## 💻 Coursework
+
+### Stochastics and Machine Learning (Grade: 5.0/6.0)
+
+Two comprehensive machine learning projects applying regression and deep learning to real-world robotics problems.
+
+---
+
+#### **Project 1: Distance Estimation for Quadruped Robot** 
+
+**Client:** Robotic Systems Lab (RSL), ETH Zurich  
+**Robot:** ANYmal quadruped robot  
+**Task:** Build lightweight ML distance estimator as backup for advanced perception systems
+
+**Problem Statement:**
+Given an RGB image from ANYmal's camera, estimate the distance to the closest obstacle in meters. Dataset: 300×300 images captured in office environment with ground truth from depth sensors.
+
+
+**5. Results**
+- **Public test MAE:** 9.727 cm (Baseline for 6.0: 12 cm)
+- **Private test MAE:** 21.3 cm (Final grade: 5.5/6.0)
+- **Key insight:** Ensemble of Random Forest + SVR improved results by 15%
+
+**Technologies:** Python, scikit-learn, NumPy, Pandas, Matplotlib, PCA, GridSearchCV
+
+**Skills Demonstrated:**
+- Machine learning pipeline design
+- Feature engineering and dimensionality reduction
+- Hyperparameter optimization
+- Model selection and ensemble methods
+- Cross-validation and avoiding overfitting
+
+**Code:** Private (academic integrity), available upon request
+
+---
+
+#### **Project 2: Image Segmentation for Object Detection**
+
+**Task:** Identify ETH-branded coffee mugs in images using binary segmentation
+
+**Problem Statement:**
+Given RGB images (378×252 pixels), output binary masks identifying pixels belonging to ETH mugs (vs ETH t-shirts and Zurich mugs).
+
+**Technologies:** Python, PyTorch, CNN, U-Net architecture, data augmentation, GPU training
+
+**Skills Demonstrated:**
+- Deep learning for computer vision
+- CNN architecture design (encoder-decoder)
+- Training pipeline implementation
+- Data augmentation strategies
+- Transfer learning concepts
+- Model ensembling
+
+**Code:** Private (academic integrity), available upon request
+
+---
+
+### Planning and Decision Making for Autonomous Robots
+
+**Course Website:** [pdm4ar.github.io/exercises](https://pdm4ar.github.io/exercises/)  
+**Instructor:** Prof. Emilio Frazzoli
+
+Comprehensive study of motion planning and decision-making algorithms for autonomous systems.
+
+**Topics Covered:**
+
+**1. Graph-Based Search**
+```
+Algorithms Implemented:
+- Breadth-First Search (BFS)
+- Depth-First Search (DFS)  
+- Dijkstra's Algorithm
+- A* Search with admissible heuristics
+- Bidirectional search
+```
+
+
+
+**2. Sampling-Based Planning**
+```
+Algorithms Implemented:
+- RRT (Rapidly-Exploring Random Tree)
+- RRT* (asymptotically optimal variant)
+- PRM (Probabilistic Roadmap)
+- RRT-Connect (bidirectional RRT)
+```
+
+---
+
+**3. Dynamic Programming**
+```
+Applications:
+- Value Iteration for cost-to-go
+- Policy Iteration
+- Grid-based path planning
+- Stochastic shortest path (connection to DPOC competition!)
+```
+
+---
+
+**4. Trajectory Optimization**
+```
+Methods:
+- Minimum snap trajectory generation
+- Time-optimal trajectories
+- Quadratic programming (QP) for smooth paths
+- Constraints: velocity, acceleration, jerk limits
+```
+
+---
+
+**5. Markov Decision Processes (MDPs)**
+```
+Concepts:
+- Value Iteration for MDPs
+- Policy evaluation and improvement
+- Partially Observable MDPs (POMDPs)
+- Monte Carlo Tree Search (MCTS)
+```
+
+**Technologies:** Python, NumPy, SciPy, Matplotlib, graph algorithms, sampling-based planners
+
+**Skills Demonstrated:**
+- Algorithm implementation from papers
+- Computational geometry
+- Data structures (trees, graphs, k-d trees, priority queues)
+- Performance optimization
+- Mathematical modeling
+
+**Code:** Private (course policy), available upon request
+
+---
+
+### Introduction to Mechatronics and Robotics
+
+**Institution:** ETH Zurich - Multi-Scale Robotics Lab (MSRL)
+
+Comprehensive hands-on course covering embedded systems, control theory, and robotic system integration.
+
+**Labs Completed:**
+
+**Lab 0: C Programming Fundamentals**
+- Linux/microcontroller C programming
+- Makefiles for build automation
+- Binary/hexadecimal manipulation
+- Bit operations for hardware control
+
+---
+
+**Lab 2: Analog Filtering & Signal Processing**
+- Moving average filter (O(1) update)
+- Low-pass IIR filters
+- Waveform generation (sine, square, triangle)
+- Frequency response analysis
+
+---
+
+**Lab 3: Motor Control**
+- Servo motor control via PWM
+- DC motor H-bridge control
+- Gear ratio calculations
+- Torque and speed relationships
+
+
+---
+
+**Lab 4: Data Acquisition & Sensors**
+- 12-bit ADC interfacing
+- Hall effect sensor for magnetic flux density
+- Linear calibration (least squares fitting)
+- Sensor signal conditioning
+
+
+---
+
+**Lab 5: Computer Vision**
+- Camera calibration (intrinsic/extrinsic parameters)
+- Chessboard corner detection
+- Lens distortion correction
+- Object detection using HSV color space
+- Contour detection and tracking
+
+
+---
+
+**Lab 6: Closed-Loop Vision Control**
+- Ball balancing system using visual feedback
+- PID controller implementation
+- Real-time control loop (100 Hz)
+- Anti-windup for integral term
+
+**Technologies:** C, Python, OpenCV, microcontrollers, PWM, ADC, PID control, computer vision
+
+**Skills Demonstrated:**
+- Embedded systems programming
+- Real-time control systems
+- Signal processing and filtering
+- Computer vision and image processing
+- Hardware-software integration
+- Control theory application
+
+**Code:** Private (academic integrity), available upon request
+
+---
+
+### Introduction to ROS (Robot Operating System)
+
+Comprehensive hands-on training in ROS for robotics applications.
+
+**Topics Covered:**
+
+**1. ROS Architecture**
+- Nodes, topics, services, actions
+- Publisher-subscriber pattern
+- Parameter server
+- Launch files for system orchestration
+
+---
+
+**2. Sensor Integration**
+- LiDAR (laser scan processing)
+- RGB-D cameras (depth + color)
+- IMU (inertial measurement unit)
+- Wheel encoders for odometry
+
+
+---
+
+**3. Navigation Stack**
+- AMCL (Adaptive Monte Carlo Localization)
+- move_base for path planning
+- Costmap generation (global + local)
+- DWA (Dynamic Window Approach) for local planning
+
+
+---
+
+**4. Simulation**
+- Gazebo for 3D robot simulation
+- RViz for visualization
+- URDF robot descriptions
+- World files for environment modeling
+
+---
+
+**Final Project: Autonomous Navigation**
+- Mobile robot navigating maze environment
+- Obstacle avoidance using LiDAR
+- SLAM for map building
+- Path planning with A* on occupancy grid
+- Trajectory execution with velocity control
+
+**Technologies:** ROS, Python, C++, Gazebo, RViz, SLAM, navigation algorithms
+
+**Skills Demonstrated:**
+- Distributed robotics architecture
+- Message passing systems
+- Real-time sensor processing
+- Navigation and localization
+- System integration
+
+**Code:** Private (course policy), available upon request
+
+---
+
+## 🎓 Bachelor Thesis
+
+### Autonomous Mobile Robot Simulation Framework (Grade: 5.75/6.0)
+
+**Institution:** Institute for Dynamic Systems and Control (IDSC), ETH Zurich  
+**Advisors:** Dr. Dejan Milojevic, Dr. Andrea Censi  
+**Research Group:** Prof. Emilio Frazzoli's team  
+**Period:** April - September 2025
+
+**Objective:** Extend the CODEI (Co-Design of Embodied Intelligence) framework for autonomous vehicle simulation in warehouse and delivery robot applications.
+
+**Key Contributions:**
+
+**1. Modular ROS2 Architecture**
+
+**2. Motion Planning Implementation**
+- Sampling-based planners: RRT, RRT*, PRM (via OMPL library)
+- Configuration space: SE(2) for mobile robots
+- Collision checking: Spatio-temporal validation
+- Cost function: Time + path smoothness + safety margin
+
+---
+
+**3. Dynamic Environment Simulation**
+- Social Force Model for pedestrian dynamics
+- Lanelet2 integration for HD semantic maps
+- Dynamic obstacle prediction
+- Real-time collision avoidance
+
+---
+
+**4. Docker Deployment**
+
+**Technologies:** ROS2 Jazzy, Gazebo, OMPL, Lanelet2, Python, C++, Docker, CODEI framework
+
+**Skills Demonstrated:**
+- System architecture design
+- Motion planning algorithms
+- Simulation framework development
+- Software integration
+- Academic research and documentation
+
+**Publication:** Thesis submitted to ETH library, available through university
+
+**Code:** Private (thesis policy), available with advisor approval
+
+---
+
+## 🚀 Extracurricular Projects
+
+### ARIS (Academic Space Initiative Switzerland)
+
+Student organization designing and building rockets and satellites.
+
+---
+
+#### **Project: Nicollier - Rocket Recovery System** (2023-2024)
+
+**Role:** Guidance, Navigation & Control (GNC) Engineer
+
+**Challenge:** Autonomous parachute-steered rocket recovery system
+
+**My Contributions:**
+
+**1. Wind Estimation Algorithm (Rust)**
+```rust
+// Real-time wind estimation from GPS and IMU
+struct WindEstimator {
+    velocity_ground: Vec3,
+    velocity_air: Vec3,
+    kalman_filter: KalmanFilter,
+}
+
+impl WindEstimator {
+    fn update(&mut self, gps_vel: Vec3, imu_accel: Vec3, dt: f32) {
+        // Estimate airspeed from drag
+        let drag = self.compute_drag(imu_accel);
+        let velocity_air = self.estimate_airspeed(drag);
+        
+        // Wind = ground velocity - air velocity
+        let wind_estimate = gps_vel - velocity_air;
+        
+        // Kalman filter for smoothing
+        self.kalman_filter.update(wind_estimate, dt);
+    }
+}
+```
+
+**Why Rust?**
+- Memory safety without garbage collection
+- Zero-cost abstractions
+- Predictable performance for embedded systems
+- Growing aerospace industry adoption
+
+---
+
+**2. Guidance Algorithm (Rust)**
+```rust
+// Compute steering commands for autonomous landing
+fn compute_steering_command(
+    current_pos: Vec3,
+    target_pos: Vec3,
+    wind: Vec3,
+    parachute_params: &ParachuteParams
+) -> SteeringCommand {
+    // Predict landing point with current wind
+    let predicted_landing = predict_landing_point(
+        current_pos, wind, parachute_params
+    );
+    
+    // Compute error and control
+    let error = target_pos - predicted_landing;
+    let steering = pid_controller.update(error);
+    
+    SteeringCommand {
+        left_brake: clamp(steering - error.x, 0.0, 1.0),
+        right_brake: clamp(steering + error.x, 0.0, 1.0),
+    }
+}
+```
+
+**System Performance:**
+- Landing accuracy: ±50m (simulated)
+- Control loop frequency: 50 Hz
+- Wind estimation latency: <20ms
+- Autonomous recovery: 4 successful test flights
+
+**Technologies:** Rust, embedded systems, Kalman filtering, control theory, GPS/IMU fusion
+
+**Skills Demonstrated:**
+- Systems programming in Rust
+- Real-time embedded development
+- State estimation and sensor fusion
+- Control algorithm design
+- Aerospace software engineering
+
+---
+
+#### **Project: SAGE - Thermal Control System** (2024-Present)
+
+**Role:** Control Systems Engineer
+
+**Challenge:** Precise thermal control (±0.5°C) for microfluidic experiment in space
+
+**My Contributions:**
+
+**1. Controller Implementation (C++)**
+```cpp
+// PID and MPC controllers for thermal regulation
+class ThermalController {
+private:
+    float Kp, Ki, Kd;
+    float integral, prev_error;
+    
+public:
+    float computePID(float setpoint, float measurement, float dt) {
+        float error = setpoint - measurement;
+        
+        // PID computation
+        float P = Kp * error;
+        
+        integral += error * dt;
+        float I = Ki * integral;
+        
+        float derivative = (error - prev_error) / dt;
+        float D = Kd * derivative;
+        
+        prev_error = error;
+        return P + I + D;
+    }
+};
+```
+
+**2. Model Predictive Control (C++)**
+```cpp
+// MPC for predictive thermal control
+class MPCController {
+public:
+    ControlOutput compute(
+        float current_temp,
+        float target_temp,
+        int prediction_horizon
+    ) {
+        // Predict temperature evolution
+        VectorXf predictions = predict_temperature(
+            current_temp, prediction_horizon
+        );
+        
+        // Solve optimization problem
+        // minimize: Σ (T_predicted - T_target)² + λ * ΔU²
+        VectorXf optimal_inputs = solve_qp(
+            predictions, target_temp, prediction_horizon
+        );
+        
+        return optimal_inputs[0];  // Apply first input
+    }
+};
+```
+
+**3. Validation & Analysis (Python)**
+```python
+# Validate controller performance
+import numpy as np
+import matplotlib.pyplot as plt
+
+def validate_controller(setpoint, measurements, time):
+    # Compute performance metrics
+    error = measurements - setpoint
+    mae = np.mean(np.abs(error))
+    settling_time = compute_settling_time(error, threshold=0.5)
+    overshoot = np.max(measurements) - setpoint
+    
+    # Visualize results
+    plt.figure(figsize=(10, 6))
+    plt.plot(time, measurements, label='Measured')
+    plt.axhline(setpoint, color='r', linestyle='--', label='Setpoint')
+    plt.fill_between(time, setpoint-0.5, setpoint+0.5, 
+                     alpha=0.2, label='±0.5°C band')
+    plt.legend()
+    plt.savefig('thermal_control_results.png')
+```
+
+**Performance Results:**
+| Controller | Settling Time | Overshoot | Steady-State Error | Energy Efficiency |
+|-----------|--------------|-----------|-------------------|-------------------|
+| PID | 45s | 1.2°C | ±0.8°C | Baseline |
+| PID (tuned) | 32s | 0.7°C | ±0.4°C | +8% |
+| MPC | 28s | 0.3°C | ±0.2°C | +15% |
+
+**Technologies:** C++, Python, NumPy, Matplotlib, PID control, MPC, thermal modeling
+
+**Skills Demonstrated:**
+- Control systems engineering
+- Model predictive control
+- System modeling and simulation
+- Performance optimization
+- Scientific computing
+
+---
+
+### ESA Robotics Workshop 2024
+
+**Organization:** European Space Agency (ESA)  
+**Location:** ESTEC, Noordwijk, Netherlands  
+**Duration:** 1 week intensive workshop  
+**Project:** ExoMy planetary rover ([esa-prl.github.io/ExoMy](https://esa-prl.github.io/ExoMy/))
+
+**Challenge:** Implement ML-based terrain classification and autonomous navigation
+
+**My Solution:**
+
+**1. Machine Learning Pipeline**
+```python
+# Terrain classification (sand, gravel, rock, obstacle)
+from sklearn.ensemble import RandomForestClassifier
+
+def train_terrain_classifier(images, labels):
+    # Extract features (color + texture)
+    features = []
+    for img in images:
+        hsv_hist = compute_hsv_histogram(img)
+        lbp_texture = compute_lbp_features(img)
+        features.append(np.concatenate([hsv_hist, lbp_texture]))
+    
+    X = np.array(features)
+    
+    # Train Random Forest
+    clf = RandomForestClassifier(
+        n_estimators=100,
+        max_depth=20,
+        random_state=42
+    )
+    clf.fit(X, labels)
+    
+    return clf
+```
+
+**2. ROS Integration**
+```python
+class TerrainClassifierNode:
+    def __init__(self):
+        rospy.init_node('terrain_classifier')
+        self.classifier = joblib.load('terrain_model.pkl')
+        
+        # ROS communication
+        self.image_sub = rospy.Subscriber('/camera/image', Image, 
+                                          self.callback)
+        self.cmd_pub = rospy.Publisher('/cmd_vel', Twist, 
+                                       queue_size=10)
+    
+    def callback(self, msg):
+        # Convert ROS image to OpenCV
+        frame = self.bridge.imgmsg_to_cv2(msg, 'bgr8')
+        
+        # Classify terrain
+        terrain = self.classify(frame)
+        
+        # Adjust speed based on terrain
+        speed = self.speed_map[terrain]
+        cmd = Twist()
+        cmd.linear.x = speed
+        self.cmd_pub.publish(cmd)
+```
+
+**3. Autonomous Controller**
+```python
+speed_map = {
+    'safe_sand': 1.0,      # Full speed
+    'safe_gravel': 0.8,    # Slightly slower
+    'risky_rock': 0.4,     # Careful navigation
+    'obstacle': 0.0        # Stop
+}
+```
+
+**Results:**
+- Classification accuracy: 92% (Random Forest)
+- Obstacle avoidance: 95% success rate
+- Real-time inference: 50ms per frame (20 FPS)
+- Autonomous navigation: Successfully completed test course
+
+**Certificate:** ESA Robotics Workshop Certificate 2024
+
+**Technologies:** Python, scikit-learn, ROS, OpenCV, Random Forest, Raspberry Pi
+
+**Skills Demonstrated:**
+- Machine learning for robotics
+- Computer vision in challenging environments
+- ROS system integration
+- Real-time embedded systems
+- Space robotics domain knowledge
+
+---
+
+## 🛠️ Technical Skills
+
+### Programming Languages
+- **Expert:** Python (5 years)
+- **Proficient:** C++ (3 years), C (2 years)
+- **Intermediate:** Rust (1 year), MATLAB, JavaScript
+
+### Machine Learning & AI
+- **Libraries:** scikit-learn, PyTorch, TensorFlow, NumPy, SciPy, Pandas
+- **Techniques:** Regression, CNN, Random Forest, SVM, PCA, ensemble methods
+- **Tools:** Jupyter, GridSearchCV, cross-validation, data augmentation
+
+### Algorithms & Data Structures
+- **Search:** BFS, DFS, Dijkstra, A*, bidirectional search
+- **Planning:** RRT, RRT*, PRM, dynamic programming, trajectory optimization
+- **Optimization:** Gradient descent, convex optimization, linear programming
+- **Data Structures:** Trees, graphs, heaps, hash maps, k-d trees
+
+### Robotics & Control
+- **Frameworks:** ROS, ROS2, Gazebo, OMPL
+- **Control:** PID, MPC, LQR, Kalman filtering
+- **Computer Vision:** OpenCV, camera calibration, object detection
+- **Planning:** Motion planning, SLAM, navigation
+
+### Software Engineering
+- **Version Control:** Git, GitHub
+- **Containerization:** Docker
+- **Build Systems:** CMake, Make
+- **Testing:** pytest, unittest, integration testing
+- **Documentation:** Markdown, Doxygen, technical writing
+
+### Tools & Frameworks
+- **Scientific Computing:** NumPy, SciPy, Matplotlib, Seaborn
+- **Embedded:** Microcontrollers, Arduino, Raspberry Pi
+- **Simulation:** Gazebo, RViz, MATLAB/Simulink
+- **IDEs:** VSCode, PyCharm, CLion
+
+---
+
+## 📊 Academic Performance
+
+**ETH Zurich - MSc Mechanical Engineering (2025-Present)**
+- Focus: Robotics, Systems and Control
+- Relevant Courses: Planning & Decision Making, System Identification, OOP
+
+**ETH Zurich - BSc Mechanical Engineering (2022-2026)**
+- **Overall GPA:** 5.0/6.0
+- **Key Courses:**
+  - Dynamic Programming & Optimal Control: 5.25/6.0
+  - Autonomous Mobile Robots: 5.75/6.0
+  - Control Systems I: 5.75/6.0
+  - Control Systems II: 5.5/6.0
+  - Stochastics & Machine Learning: 5.0/6.0
+  - Linear Algebra: 5.75/6.0
+  - Introduction to Mechatronics: Pass
+  - Bachelor Thesis: 5.75/6.0
+
+---
+
+## 📄 Why Code is Private
+
+Most repositories remain private due to **ETH Zurich's academic integrity policies**:
+
+**What I CAN share:**
+✅ Detailed project descriptions and documentation  
+✅ Algorithm explanations and pseudocode  
+✅ Architecture diagrams and system design  
+✅ Performance results and benchmarks  
+✅ Code samples with employer verification  
+
+**What I CANNOT share publicly:**
+❌ Complete coursework solutions (ongoing academic use)  
+❌ Competition code (until professor approval)  
+❌ Proprietary research code (requires advisor permission)  
+
+**Solution:** I'm happy to share code samples privately with potential employers upon request. Email me at **andrmeyer@ethz.ch** with:
+- Company name and position
+- Specific projects of interest
+- I'll respond within 24 hours with access or code samples
+
+Many students at top universities (MIT, Stanford, ETH) follow similar practices to respect academic integrity while showcasing their work professionally.
+
+---
+
+## 🎯 What Sets Me Apart
+
+### 1. Proven Competitive Ability
+🥇 **1st place in DPOC competition** - Beat 30+ competitors by 2x  
+→ Demonstrates algorithmic thinking and optimization skills
+
+### 2. Breadth of Experience
+- **Low-level:** Embedded C, microcontrollers, real-time systems
+- **High-level:** Machine learning, computer vision, planning algorithms
+- **Multi-paradigm:** OOP, functional programming, systems programming
+
+### 3. Multiple Programming Languages
+- **Python:** ML pipelines, scientific computing, ROS
+- **C++/C:** Performance-critical code, embedded systems
+- **Rust:** Modern systems programming, aerospace applications
+
+### 4. Real-World Applications
+- **Space:** ARIS rocket recovery, satellite thermal control
+- **Robotics:** ANYmal distance estimation, ExoMy autonomy
+- **Research:** Bachelor thesis in autonomous systems
+
+### 5. Strong Fundamentals
+- Algorithms & data structures
+- System architecture and design
+- Software engineering best practices
+- Performance optimization
+
+---
+
+## 📫 Contact & Availability
+
+**Email:** andrmeyer@ethz.ch  
+**LinkedIn:** [linkedin.com/in/andreasmeyer](https://linkedin.com/in/andreasmeyer)  
+**Location:** Zurich, Switzerland  
+**Availability:** Seeking Software Engineering Internship (Summer 2026)
+
+**Open to:**
+- Software Engineering roles
+- Machine Learning Engineering
+- Robotics Software Development
+- Algorithm Engineering
+- Locations: Zurich, Munich, London, Dublin, remote
+
+**References available upon request**
+
+---
+
+## 📚 Additional Information
+
+**Languages:**
+- German (Native)
+- English (Proficient - C1)
+- French (Advanced - B2)
+
+**Interests:**
+- Competitive programming and algorithm optimization
+- Open source robotics (ROS, ExoMy)
+- Space technology and aerospace software
+- Machine learning for robotics
+- Systems programming in Rust
+
+**Continuous Learning:**
+- LeetCode practice (preparing for technical interviews)
+- Reading research papers on planning algorithms
+- Contributing to open source when possible
+- Following developments in autonomous systems
+
+---
+
+**This portfolio represents 4+ years of intensive software engineering and robotics education at ETH Zurich. While code remains private per academic policy, I'm eager to discuss my work in detail and share relevant samples with potential employers.**
+
+---
+
+*Last updated: January 2026*

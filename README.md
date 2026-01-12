@@ -402,14 +402,6 @@ Student organization designing and building rockets and satellites.
 
 **Challenge:** Implement ML-based terrain classification and autonomous navigation
 
-**My Solution:**
-
-**1. Machine Learning Pipeline**
-
-**2. ROS Integration**
-
-**3. Autonomous Controller**
-
 **Certificate:** ESA Robotics Workshop Certificate 2024
 
 **Technologies:** Python, scikit-learn, ROS, OpenCV, Random Forest, Raspberry Pi

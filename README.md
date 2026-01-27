@@ -300,7 +300,7 @@ Comprehensive hands-on training in ROS for robotics applications.
 ### Autonomous Mobile Robot Simulation Framework (Grade: 5.75/6.0)
 
 **Institution:** Institute for Dynamic Systems and Control (IDSC), ETH Zurich  
-**Advisors:** Dr. Dejan Milojevic, Dr. Andrea Censi  
+**Advisors:** Dr. Dejan Milojevic, Dr. Andrea Censi, Prof. Emilio Frazzoli  
 **Research Group:** Prof. Emilio Frazzoli's team  
 **Period:** April - September 2025
 
@@ -434,37 +434,5 @@ Most repositories remain private due to **ETH Zurich's academic integrity polici
 **Solution:** I'm happy to share code samples privately with potential employers upon request. Email me at **andrmeyer@ethz.ch** with:
 - Company name and position
 - Specific projects of interest
-- I'll respond within 24 hours with access or code samples
-
----
-
-## 🎯 What Sets Me Apart
-
-### 1. Proven Competitive Ability
-🥇 **1st place in DPOC competition** - Beat 30+ competitors by 2x  
-→ Demonstrates algorithmic thinking and optimization skills
-
-### 2. Breadth of Experience
-- **Low-level:** Embedded C, microcontrollers, real-time systems
-- **High-level:** Machine learning, computer vision, planning algorithms
-- **Multi-paradigm:** OOP, functional programming, systems programming
-
-### 3. Multiple Programming Languages
-- **Python:** ML pipelines, scientific computing, ROS
-- **C++/C:** Performance-critical code, embedded systems
-- **Rust:** Modern systems programming, aerospace applications
-
-### 4. Real-World Applications
-- **Space:** ARIS rocket recovery, satellite thermal control
-- **Robotics:** ANYmal distance estimation, ExoMy autonomy
-- **Research:** Bachelor thesis in autonomous systems
-
-### 5. Strong Fundamentals
-- Algorithms & data structures
-- System architecture and design
-- Software engineering best practices
-- Performance optimization
-
----
 
 *Last updated: January 2026*

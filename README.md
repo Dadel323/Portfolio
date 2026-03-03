@@ -1,4 +1,4 @@
-# Andreas Meyer - Software Projects Portfolio
+# Andreas Meyer - Projects Portfolio
 
 **MSc Mechanical Engineering Student** | ETH Zurich  
 **Focus:** Software Engineering and Robotics
@@ -11,12 +11,6 @@
 ## 📌 About This Portfolio
 
 This repository catalogs my programming projects and coursework from ETH Zurich. Many projects remain **private** due to **academic integrity policies**, but I'm happy to share code samples with potential employers upon request. Below you'll find detailed descriptions of my work, the technologies used, and the skills developed.
-
-**Available to share:**
-- Architecture and approach documentation
-- Algorithm explanations and pseudocode
-- Performance results and analysis
-- Code samples with employer verification
 
 **Contact me at andrmeyer@ethz.ch or andreasm323@gmail.com to request access.**
 
@@ -36,12 +30,12 @@ This repository catalogs my programming projects and coursework from ETH Zurich.
 - Moving obstacles (drones)
 - Goal: Find optimal policy minimizing expected cost-to-go
 
-**Why I Won:**
+**Key Time Imrpovements:**
 - **Algorithmic optimization:** Transformed O(K²L) nested loops into O(KL) vectorized operations
 - **Matrix operations:** Transposed probability tensor for cache-friendly access
 - **Numerical efficiency:** Minimized memory allocations and data copying
 
-**Technologies:** Python, NumPy, SciPy, dynamic programming, optimization
+**Technologies:** Python, NumPy, SciPy, Dynamic Programming, Optimization
 
 **Skills Demonstrated:**
 - Algorithm design and complexity analysis
@@ -51,7 +45,52 @@ This repository catalogs my programming projects and coursework from ETH Zurich.
 
 ---
 
+## 🎓 Bachelor Thesis
+
+### Autonomous Mobile Robot Simulation Framework (Grade: 5.75/6.0)
+
+**Institution:** Institute for Dynamic Systems and Control (IDSC), ETH Zurich  
+**Advisors:** Dr. Dejan Milojevic, Dr. Andrea Censi, Prof. Emilio Frazzoli  
+**Research Group:** Prof. Emilio Frazzoli's team  
+**Period:** April - September 2025
+
+**Objective:** Extend the CODEI (Co-Design of Embodied Intelligence) framework for autonomous vehicle simulation in warehouse and delivery robot applications.
+
+**Key Contributions:**
+
+**1. Modular ROS2 Architecture**
+
+**2. Motion Planning Implementation**
+- Sampling-based planners: RRT, RRT*, PRM (via OMPL library)
+- Configuration space: SE(2) for mobile robots
+- Collision checking: Spatio-temporal validation
+- Cost function: Time + path smoothness + safety margin
+
+---
+
+**3. Dynamic Environment Simulation**
+- Social Force Model for pedestrian dynamics
+- Lanelet2 integration for HD semantic maps
+- Dynamic obstacle prediction
+- Real-time collision avoidance
+
+---
+
+**4. Docker Deployment**
+
+**Technologies:** ROS2 Jazzy, Gazebo, OMPL, Lanelet2, Python, C++, Docker, CODEI framework
+
+**Skills Demonstrated:**
+- System architecture design
+- Motion planning algorithms
+- Simulation framework development
+- Software integration
+- Academic research and documentation
+
+---
+
 ## 💻 Coursework
+
 
 ### Stochastics and Machine Learning
 
@@ -61,7 +100,6 @@ Two comprehensive machine learning projects applying regression and deep learnin
 
 #### **Project 1: Distance Estimation for Quadruped Robot** 
 
-**Client:** Robotic Systems Lab (RSL), ETH Zurich  
 **Robot:** ANYmal quadruped robot  
 **Task:** Build lightweight ML distance estimator as backup for advanced perception systems
 
@@ -72,14 +110,14 @@ Given an RGB image from ANYmal's camera, estimate the distance to the closest ob
 **Results**
 - **Final MAE:** 9.727 cm (Baseline for 6.0: 12 cm)
 
-**Technologies:** Python, scikit-learn, NumPy, Pandas, Matplotlib, PCA, GridSearchCV
+**Technologies:** Python, scikit-learn, NumPy, Pandas, Matplotlib, PCA
 
 **Skills Demonstrated:**
 - Machine learning pipeline design
 - Feature engineering and dimensionality reduction
 - Hyperparameter optimization
 - Model selection and ensemble methods
-- Cross-validation and avoiding overfitting
+- Cross-validation
 
 ---
 
@@ -140,7 +178,7 @@ Applications:
 ```
 ---
 
-**4. Trajectory Optimization**
+**4. MPC Trajectory Optimization**
 ```
 Methods:
 - Minimum snap trajectory generation
@@ -177,9 +215,9 @@ Concepts:
 
 Comprehensive hands-on course covering embedded systems, control theory, and robotic system integration.
 
-**Labs Completed:**
+**Topics Covered:**
 
-**Lab 0: C Programming Fundamentals**
+**1. C Programming Fundamentals**
 - Linux/microcontroller C programming
 - Makefiles for build automation
 - Binary/hexadecimal manipulation
@@ -187,7 +225,7 @@ Comprehensive hands-on course covering embedded systems, control theory, and rob
 
 ---
 
-**Lab 2: Analog Filtering & Signal Processing**
+**2. Analog Filtering & Signal Processing**
 - Moving average filter (O(1) update)
 - Low-pass IIR filters
 - Waveform generation (sine, square, triangle)
@@ -195,7 +233,7 @@ Comprehensive hands-on course covering embedded systems, control theory, and rob
 
 ---
 
-**Lab 3: Motor Control**
+**3. Motor Control**
 - Servo motor control via PWM
 - DC motor H-bridge control
 - Gear ratio calculations
@@ -203,7 +241,7 @@ Comprehensive hands-on course covering embedded systems, control theory, and rob
 
 ---
 
-**Lab 4: Data Acquisition & Sensors**
+**4. Data Acquisition & Sensors**
 - 12-bit ADC interfacing
 - Hall effect sensor for magnetic flux density
 - Linear calibration (least squares fitting)
@@ -211,7 +249,7 @@ Comprehensive hands-on course covering embedded systems, control theory, and rob
 
 ---
 
-**Lab 5: Computer Vision**
+**5. Computer Vision**
 - Camera calibration (intrinsic/extrinsic parameters)
 - Chessboard corner detection
 - Lens distortion correction
@@ -220,7 +258,7 @@ Comprehensive hands-on course covering embedded systems, control theory, and rob
 
 ---
 
-**Lab 6: Closed-Loop Vision Control**
+**6. Closed-Loop Vision Control**
 - Ball balancing system using visual feedback
 - PID controller implementation
 - Real-time control loop (100 Hz)
@@ -260,7 +298,7 @@ Comprehensive hands-on training in ROS for robotics applications.
 
 ---
 
-**3. Navigation Stack**
+**3. Navigation Stack with NAV2**
 - AMCL (Adaptive Monte Carlo Localization)
 - move_base for path planning
 - Costmap generation (global + local)
@@ -269,7 +307,7 @@ Comprehensive hands-on training in ROS for robotics applications.
 
 ---
 
-**4. Simulation**
+**4. Simulation with Gazebo**
 - Gazebo for 3D robot simulation
 - RViz for visualization
 - URDF robot descriptions
@@ -284,7 +322,7 @@ Comprehensive hands-on training in ROS for robotics applications.
 - Path planning with A* on occupancy grid
 - Trajectory execution with velocity control
 
-**Technologies:** ROS, Python, C++, Gazebo, RViz, SLAM, navigation algorithms
+**Technologies:** ROS, Python, C++, Gazebo, RViz, SLAM, NAV2, navigation algorithms
 
 **Skills Demonstrated:**
 - Distributed robotics architecture
@@ -295,49 +333,6 @@ Comprehensive hands-on training in ROS for robotics applications.
 
 ---
 
-## 🎓 Bachelor Thesis
-
-### Autonomous Mobile Robot Simulation Framework (Grade: 5.75/6.0)
-
-**Institution:** Institute for Dynamic Systems and Control (IDSC), ETH Zurich  
-**Advisors:** Dr. Dejan Milojevic, Dr. Andrea Censi, Prof. Emilio Frazzoli  
-**Research Group:** Prof. Emilio Frazzoli's team  
-**Period:** April - September 2025
-
-**Objective:** Extend the CODEI (Co-Design of Embodied Intelligence) framework for autonomous vehicle simulation in warehouse and delivery robot applications.
-
-**Key Contributions:**
-
-**1. Modular ROS2 Architecture**
-
-**2. Motion Planning Implementation**
-- Sampling-based planners: RRT, RRT*, PRM (via OMPL library)
-- Configuration space: SE(2) for mobile robots
-- Collision checking: Spatio-temporal validation
-- Cost function: Time + path smoothness + safety margin
-
----
-
-**3. Dynamic Environment Simulation**
-- Social Force Model for pedestrian dynamics
-- Lanelet2 integration for HD semantic maps
-- Dynamic obstacle prediction
-- Real-time collision avoidance
-
----
-
-**4. Docker Deployment**
-
-**Technologies:** ROS2 Jazzy, Gazebo, OMPL, Lanelet2, Python, C++, Docker, CODEI framework
-
-**Skills Demonstrated:**
-- System architecture design
-- Motion planning algorithms
-- Simulation framework development
-- Software integration
-- Academic research and documentation
-
----
 
 ## 🚀 Extracurricular Projects
 
@@ -356,6 +351,9 @@ Student organization designing and building rockets and satellites.
 **My Contributions:**
 
 **1. Wind Estimation Algorithm (Rust)**
+- Onboard wind estimation via pressure sensors
+- Sensor Fusion
+- Real-Time Wind Estimation calculations
 
 **Why Rust?**
 - Memory safety without garbage collection
@@ -390,6 +388,7 @@ Student organization designing and building rockets and satellites.
 - System modeling and simulation
 - Performance optimization
 - Scientific computing
+- PCB design
 
 ---
 
@@ -404,7 +403,7 @@ Student organization designing and building rockets and satellites.
 
 **Certificate:** ESA Robotics Workshop Certificate 2024
 
-**Technologies:** Python, scikit-learn, ROS, OpenCV, Random Forest, Raspberry Pi
+**Technologies:** Python, scikit-learn, ROS2, OpenCV, Random Forest, Raspberry Pi
 
 **Skills Demonstrated:**
 - Machine learning for robotics
@@ -414,25 +413,5 @@ Student organization designing and building rockets and satellites.
 - Space robotics domain knowledge
 
 ---
-
-
-
-## 📄 Why Code is Private
-
-Most repositories remain private due to **ETH Zurich's academic integrity policies**:
-
-**What I CAN share:**
-✅ Detailed project descriptions and documentation  
-✅ Algorithm explanations and pseudocode  
-✅ Architecture diagrams and system design  
-
-**What I CANNOT share publicly:**
-❌ Complete coursework solutions (ongoing academic use)  
-❌ Competition code (until professor approval)  
-❌ Proprietary research code (requires advisor permission)  
-
-**Solution:** I'm happy to share code samples privately with potential employers upon request. Email me at **andrmeyer@ethz.ch** with:
-- Company name and position
-- Specific projects of interest
 
 *Last updated: January 2026*
